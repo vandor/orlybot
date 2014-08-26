@@ -81,6 +81,8 @@ about redis at all.
 
 ## Adapters
 
+I've configured this bot to use [this XMPP adapter][XMPP-Adapter].
+
 Adapters are the interface to the service you want your hubot to run on. This
 can be something like Campfire or IRC. There are a number of third party
 adapters that the community have contributed. Check
@@ -98,6 +100,7 @@ then run hubot with the adapter.
 Where `<adapter>` is the name of your adapter without the `hubot-` prefix.
 
 [hubot-adapters]: https://github.com/github/hubot/blob/master/docs/adapters.md
+[XMPP-Adapter]: https://github.com/markstory/hubot-xmpp
 
 ## hubot-scripts
 
