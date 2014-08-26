@@ -1,2 +1,8 @@
 #Note: This file must be sourced
+export HUBOT_XMPP_USERNAME=uname@chat
+export HUBOT_XMPP_PASSWORD=password
+export HUBOT_XMPP_ROOMS=chat0192837465@conference.chat
+export HUBOT_XMPP_PORT=5222
+
+#history.coffee
 export HUBOT_HISTORY_LINES=1000
