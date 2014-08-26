@@ -1,5 +1,33 @@
 # Hubot
 
+## Quick Start
+Make sure you have nodejs and npm.
+Clone this repo.
+If you're behind a proxy, give npm the authentication details:
+
+    $ npm config set proxy http://uname:password@proxyserver:port
+    $ npm config set https-proxy http://uname:password@proxyserver:port
+
+Install the dependencies with npm. From the root of this repo:
+
+    $ sudo npm install
+
+Put your XMPP auth credentials in set_hubot_vars script and source it.
+
+    $ vim set_hubot_vars
+    $ source set_hubot_vars
+
+Then use the XMPP adapter like so:
+
+    $ bin/hubot -a xmpp
+
+Alternately, you can test it out with the default shell adapter.
+
+    $ bin/hubot
+
+
+### About
+
 This is a version of GitHub's Campfire bot, hubot. He's pretty cool.
 
 This version is designed to be deployed on [Heroku][heroku]. This README was generated for you by hubot to help get you started. Definitely update and improve to talk about your own instance, how to use and deploy, what functionality he has, etc!
