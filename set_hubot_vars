@@ -1,0 +1,2 @@
+#Note: This file must be sourced
+export HUBOT_HISTORY_LINES=1000
