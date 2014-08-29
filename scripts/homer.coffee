@@ -35,11 +35,29 @@ internetQuotes = [
   "The Internet? Is that thing still around?"
 ]
 
+foodFeels = [
+  "Mmmm...",
+  "Mmmm...",
+  "Mmmm...",
+  "Mmmm...",
+  "Mmmm...",
+  "Mmmm...",
+  "Mmmm...",
+  "Mmmm...",
+  "Mmmm...",
+  "Mmmm...",
+  "Mmmm...",
+  "Mmmm...",
+  "Mmmm...",
+  "Mmmm...",
+  "No. Nobody likes"
+]
+
 module.exports = (robot) ->
   robot.hear /beer/i, (msg) ->
     msg.send msg.random beerQuotes
-  robot.hear /bacon|bagel|barbecue|burger|candy|chocolate|donut|sandwich|breakfast|lunch|dinner|food|grub/i, (msg) ->
-    msg.send "Mmmm... " + msg.match[0]
+  robot.hear /bacon|bagel|barbecue|burger|candy|chocolate|donut|sandwich|breakfast|lunch|dinner|food|grub|cake|ice cream|pie|strudel|pastry|hog fat/i, (msg) ->
+    msg.send "#{msg.random foodFeels} #{msg.match[0]}"
   robot.hear /try/i, (msg) ->
     msg.send msg.random tryQuotes
   robot.hear /internet|interweb|interwebs|intranet/i, (msg) ->  

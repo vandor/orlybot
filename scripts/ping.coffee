@@ -7,9 +7,14 @@
 #   hubot time - Reply with current time
 #   hubot die - End hubot process
 
+randomInt = (lower, upper) ->  Math.floor(Math.random() * (upper - lower + 1) + lower)
+
 module.exports = (robot) ->
   robot.respond /PING$/i, (msg) ->
-    msg.send "PONG"
+    if randomInt(1, 10) == 10
+      msg.send "SPIKE!"
+    else
+      msg.send "PONG"
 
   robot.respond /ADAPTER$/i, (msg) ->
     msg.send robot.adapterName
