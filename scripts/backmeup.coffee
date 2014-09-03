@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   back me up - replies with "I've got your back"
+#   back me up - replies with some supportive affirmation
 #
 # Author:
 #   jloya
@@ -23,6 +23,6 @@ moralSupport = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /back me up/i, (msg) ->
+  robot.hear /back me up|am i right/i, (msg) ->
     support = msg.random moralSupport
     msg.send support.replace "%", msg.message.user.name
