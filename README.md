@@ -1,8 +1,7 @@
 # Hubot
 
 ## Quick Start
-Make sure you have nodejs and npm.
-Clone this repo.
+Make sure you have nodejs and npm. Clone this repo.
 If you're behind a proxy, give npm the authentication details:
 
     $ npm config set proxy http://uname:password@proxyserver:port
@@ -10,6 +9,7 @@ If you're behind a proxy, give npm the authentication details:
 
 Install the dependencies with npm. From the root of this repo:
 
+    $ sudo npm install -g hubot coffee-script
     $ sudo npm install
 
 Put your XMPP auth credentials in set_hubot_vars script and source it.
@@ -25,6 +25,12 @@ Alternately, you can test it out with the default shell adapter.
 
     $ bin/hubot
 
+
+### Troubleshooting
+You might need to install g++ if "sudo npm install" gives errors mentioning g++
+
+    $ sudo apt-get install g++
+    
 
 ### About
 
