@@ -26,8 +26,9 @@ beerQuotes = [
 ]
 
 tryQuotes = [
-  "Kids, you tried your best and you failed miserably. The lesson is, never try.",
-  "Trying is the first step towards failure."
+  "If at first you do succeed, try something harder.",
+  "Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.",
+  "Think left and think right and think low and think high. Oh, the thinks you can think up if only you try!"
 ]
 
 internetQuotes = [

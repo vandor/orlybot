@@ -19,7 +19,8 @@ moralSupport = [
   "Yeah, I'm with %",
   "% all the way",
   "% has the skills to pay the bills",
-  "I would vote for you, %"
+  "I would vote for you, %",
+  "A man, a plan, a canal: %"
 ]
 
 module.exports = (robot) ->
