@@ -15,6 +15,8 @@
 # Author:
 #   wubr
 
+access_denied = "I'm sorry, %. I'm afraid I can't do that."
+
 class History
   constructor: (@robot, @keep) ->
     @cache = []
@@ -66,12 +68,18 @@ module.exports = (robot) ->
     history.add historyentry
 
   robot.respond /show ((\d+) lines of )?history/i, (msg) ->
-    if msg.match[2]
-      lines = msg.match[2]
+    if (msg.message.user.name == 'jloya3')
+      if msg.match[2]
+        lines = msg.match[2]
+      else
+        lines = history.keep
+      msg.send history.show(lines)
     else
-      lines = history.keep
-    msg.send history.show(lines)
+      msg.send access_denied.replace "%", msg.message.user.name
 
   robot.respond /clear history/i, (msg) ->
-    msg.send "Ok, I'm clearing the history."
-    history.clear()
+    if (msg.message.user.name == 'jloya3')
+      msg.send "Ok, I'm clearing the history."
+      history.clear()
+    else
+      msg.send access_denied.replace "%", msg.message.user.name

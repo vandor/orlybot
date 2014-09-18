@@ -10,8 +10,14 @@ Util = require "util"
 
 module.exports = (robot) ->
   robot.respond /show storage$/i, (msg) ->
-    output = Util.inspect(robot.brain.data, false, 4)
-    msg.send output
+    @robot.logger.info "Show storage called by: #{msg.message.user.name}"
+    if (msg.message.user.name != 'jloya3')
+      brain_data = robot.brain.data
+      brain_data.history = []
+      msg.send Util.inspect(brain_data, false, 4)
+    else
+      output = Util.inspect(robot.brain.data, false, 4)
+      msg.send output
 
   robot.respond /show users$/i, (msg) ->
     response = ""
