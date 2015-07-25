@@ -15,7 +15,7 @@
 # Author:
 #   wubr
 
-access_denied = "I'm sorry, %. I'm afraid I can't do that."
+access_denied = "Why are you so concerned about his story? You have your own to write!"
 
 class History
   constructor: (@robot, @keep) ->

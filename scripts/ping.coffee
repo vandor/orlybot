@@ -45,5 +45,6 @@ module.exports = (robot) ->
 
   robot.respond /DIE$/i, (msg) ->
     msg.send msg.random dyingWords
-    process.exit 0
-
+    setTimeout ->
+      process.exit 0
+    , 100

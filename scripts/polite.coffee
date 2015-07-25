@@ -49,8 +49,8 @@ module.exports = (robot) ->
   robot.hear /\b(ty|thx)\b/i, (msg) ->
     msg.reply msg.random shortResponses if youTalkinToMe(msg, robot)
 
-  robot.hear /\b(hello|hi|sup|howdy|good (morning|evening|afternoon))\b/i, (msg) ->
-    msg.reply "#{robot.name} at your service!" if youTalkinToMe(msg, robot)
+#  robot.hear /\b(hello|hi|sup|howdy|good (morning|evening|afternoon))\b/i, (msg) ->
+#    msg.reply "#{robot.name} at your service!" if youTalkinToMe(msg, robot)
     
   robot.hear /\b(bye|night|goodbye|good night)\b/i, (msg) ->
-    msg.reply msg.random farewellResponses if youTalkinToMe(msg, robot)
+    msg.reply msg.random farewellResponses
